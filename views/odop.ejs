@@ -1,0 +1,346 @@
+
+<%- include("partials/Oheader"); -%>
+			<!-- Top Navigation -->
+			
+            <!DOCTYPE html>
+            <html lang="en" class="no-js">
+                <head>
+                    <meta charset="UTF-8" />
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+                    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <meta name="HandheldFriendly" content="true">
+                    <title>Circular Navigation - Demo 2 | Codrops</title>
+                    <meta name="description" content="Circular Navigation Styles - Building a Circular Navigation with CSS Transforms | Codrops " />
+                    <meta name="keywords" content="css transforms, circular navigation, round navigation, circular menu, tutorial" />
+                    <meta name="author" content="Sara Soueidan for Codrops" />
+                    <link rel="shortcut icon" href="../favicon.ico">
+                    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+                    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+                    <link rel="stylesheet" type="text/css" href="css/component2.css" />
+                    <script src="images/js/modernizr-2.6.2.min.js"></script>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                    <script src="images/https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                    <script src="images/https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                    <script src="images/https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                    <link rel=”stylesheet” type=”text/css” href=”css/hell.css” />
+                    <script src="images/https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                    <script src="images/https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                    <link href="css/styles.css" rel="stylesheet">
+                    <script src="images/js/vendor/babel-polyfill-6.26.0.min.js"></script>
+                    <script src="images/js/jquery.sticky-nav.js"></script>
+            <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-7243260-2']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+            </script>
+            
+            <style>
+                .header{
+                    column-count: 5;
+                    grid-area: header
+                }
+                .slideshow-container {
+              max-width: 800px;
+              position: relative;
+              margin: auto;
+              
+            }
+            
+            /* Caption text */
+            .text {
+              color: #f2f2f2;
+              font-size: 15px;
+              padding: 8px 12px;
+              position: absolute;
+              bottom: 8px;
+              width: 100%;
+              text-align: center;
+            }
+            
+            /* Number text (1/3 etc) */
+            .numbertext {
+              color: #f2f2f2;
+              font-size: 12px;
+              padding: 8px 12px;
+              position: absolute;
+              top: 0;
+            }
+            
+            /* The dots/bullets/indicators */
+            .dot {
+              height: 15px;
+              width: 15px;
+              margin: 0 2px;
+              background-color: #bbb;
+              border-radius: 50%;
+              display: inline-block;
+              transition: background-color 0.6s ease;
+            }
+            
+            .active {
+              background-color: #717171;
+            }
+            
+            /* Fading animation */
+            .fade {
+              -webkit-animation-name: fade;
+              -webkit-animation-duration: 1.5s;
+              animation-name: fade;
+              animation-duration: 1.5s;
+            }
+            
+            @-webkit-keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+            }
+            
+            @keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+            }
+            
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 500px) {
+              .text {font-size: 11px}
+              .col-lg-12 h2 {font-size: 50px;padding-left:0%;text-align: center;}
+              /* .row .col-lg-4 img {height: 50px; width: 50px;} */
+            }
+            </style>
+                </head>
+                <body>
+                    
+                        <!-- Top Navigation -->
+                        
+                            <div class ="header">
+                                <div id ="mydiv1"> <img src="images/blackpotteryorignal.jpeg" style="width:300px;height:200px;"></div> 
+                                <div id ="mydiv3"><img src="images/odop%20logo.jpg" style="width:300px;height:200px;"></div>
+                                <div id ="mydiv2"><img src="images/make-india.png" style="width:300px;height:200px;"></div> 
+                                <div> <img src="images/blackpottery1.jpg" style="width:300px;height:200px;" ></div>    
+                                <div><img src="images/upgovernment.jpeg" style="width:300px;height:200px;" ></div>    
+                                </div>
+                        
+                        <!-- <div class="component"> -->
+                            <section class="col-lg-12">
+                            <h2 style="color: white; background-color: rgb(61, 39, 39); font-family: 'Russo One', sans-serif;"><strong>BLACK POTTERY</strong></h2>
+                            </section>
+                            <!-- Start Nav Structure -->
+                            <!-- <button class="cn-button" id="cn-button">Menu</button>
+                            <div class="cn-wrapper" id="cn-wrapper">
+                                <ul>
+                                    <li><a href="#"><span>About</span></a></li>
+                                    <li><a href="#"><span>News</span></a></li>
+                                    <li><a href="#"><span>Articles</span></a></li>
+                                    <li><a href="#"><span>Ideas</span></a></li>
+                                    <li><a href="single.html"><span>Exhibition</span></a></li>
+                                    <li><a href="#"><span>Contact Us</span></a></li>
+                                    <li><a href="#"><span>Follow</span></a></li>
+                                 </ul>
+                            </div> -->
+                            <!-- End of Nav Structure -->
+                        <!-- </div>
+                        <section class="display: flex; ">
+                            <img src="images/hel.gif" style="width:800px;height:310px; position: absolute; margin-left: 23%;">
+                            <div class="card text-white mb-3" style="max-width: 28rem; max-height: 30rem; margin-left: 09%; position: absolute;background-color: rgb(61, 39, 39);">
+                                <div class="card-header" style="text-align: center;"><strong>NEWS</strong></div>
+                                <div class="card-body">
+                                  
+                                  <p class="card-text"><marquee direction="up">The UP Government’s One District-One Product Programme aims to encourage such indigenous and specialized products and crafts in UP that are found nowhere else – like the ancient and nutritious 'Kala Namak' rice, the rare and intriguing wheat-stalk craft, world-famous chikankari and zari-zardozi work on clothes, and the intricate and stunning horn-bone work that uses the remains of dead animals rather than live ones, a nature-friendly replacement for ivory.</marquee></p>
+                                </div>
+                              </div>
+                              
+                            
+                              <div class="card text-white mb-3" style="max-width: 28rem; position: absolute; margin-left: 61.8%;background-color: rgb(61, 39, 39);">
+                                
+                                <div class="card-header" style="text-align:center; "><strong>LATEST UPDATES</strong></div>
+                                <div class="card-body">
+                                  <p class="card-text"><marquee direction="up">The UP Government’s One District-One Product Programme aims to encourage such indigenous and specialized products and crafts in UP that are found nowhere else – like the ancient and nutritious 'Kala Namak' rice, the rare and intriguing wheat-stalk craft, world-famous chikankari and zari-zardozi work on clothes, and the intricate and stunning horn-bone work that uses the remains of dead animals rather than live ones, a nature-friendly replacement for ivory.</marquee></p>
+                                </div>
+                        
+                        
+                              
+                            </div> -->
+                            <section class="row" style="text-align:center;">
+                                <div class="col-lg-4" style="padding: 1%;">
+                                    <div class="card text-white mb-3" style="height: 500px;background-color: rgb(61, 39, 39);">
+                                        <div class="card-header" style="text-align: center;"><strong>NEWS</strong></div>
+                                        <div class="card-body">
+                                          
+                                          <p class="card-text"><marquee direction="up" height="400">The UP Government’s One District-One Product Programme aims to encourage such indigenous and specialized products and crafts in UP that are found nowhere else – like the ancient and nutritious 'Kala Namak' rice, the rare and intriguing wheat-stalk craft, world-famous chikankari and zari-zardozi work on clothes, and the intricate and stunning horn-bone work that uses the remains of dead animals rather than live ones, a nature-friendly replacement for ivory.</marquee></p>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-lg-4 imageset" style="background-color: rgb(61, 39, 39);">
+                                    <img src="images/hel.gif" style="width:600px;height:410px;padding-top: 25%;">
+                                </div>
+                                <div class="col-lg-4" style="padding: 1%;">
+                                    <div class="card text-white mb-3" style="height: 500px; background-color: rgb(61, 39, 39);">
+                                
+                                        <div class="card-header" style="text-align:center; "><strong>LATEST UPDATES</strong></div>
+                                        <div class="card-body" style="text-align:center; height: 400px;">
+                                          <p class="card-text" ><marquee direction="up" height="400">The UP Government’s One District-One Product Programme aims to encourage such indigenous and specialized products and crafts in UP that are found nowhere else – like the ancient and nutritious 'Kala Namak' rice, the rare and intriguing wheat-stalk craft, world-famous chikankari and zari-zardozi work on clothes, and the intricate and stunning horn-bone work that uses the remains of dead animals rather than live ones, a nature-friendly replacement for ivory.</marquee></p>
+                                        </div>
+                                
+                                </div>
+                            </section>
+
+                        </section>
+                        
+                    <!-- /container -->
+            
+            
+            
+                    <section class="row" style="background-color: rgb(61, 39, 39); color: white; height: auto; padding:.5%; margin-top: 100px;">
+                    <div class="col">
+                        <img src="https://pbs.twimg.com/profile_images/1084774779125547013/YbQQCvV9_400x400.jpg" alt="Cinque Terre" width="175" height="136" style="border-radius: 10px;">
+                        <span>
+                            <h2>Yogi Adityanath</h2>
+                            <br>
+                            <p style="letter-spacing: 2px;">Hon'ble Chief Minister,
+                                Uttar Pradesh</p>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <img src="http://odopup.in/site/writereaddata/siteContent/201908231103510121Sidharth-Nath-Singh.jpg" alt="Cinque Terre" width="175" height="136" style="border-radius: 10px;">
+                        <span>
+                            <h2>Shri Sidharth Nath Singh</h2>
+                            <br>
+                            <p style="letter-spacing: 2px;">Hon’ble Cabinet Minister of Khadi, Village Industries, Sericulture, Textile, Micro, Small & Medium Enterprises and Export Promotion, Uttar Pradesh</p>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <img src="http://odopup.in/site/writereaddata/siteContent/201910211642073687shri-chaudhary-ji.jpg" alt="Cinque Terre" width="175" height="136" style="border-radius: 10px;">
+                        <span>
+                            <h2>Chaudhary Udaybhan Singh</h2>
+                            <br>
+                            <p style="letter-spacing: 2px;">Hon'ble State Minister of
+                                Khadi, Village Industries, Sericulture, Textile, Micro,
+                                Small & Medium Enterprises and Export Promotion, Uttar Pradesh</p>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <img src="http://odopup.in/site/writereaddata/siteContent/201911291227431320cs_291119.jpg" alt="Cinque Terre" width="175" height="136" style="border-radius: 10px;">
+                        <span>
+                            <h2>Shri Rajendra Kumar
+                                Tiwari, IAS</h2>
+                            <br>
+                            <p style="letter-spacing: 2px;">Chief Secretary,
+                                Uttar Pradesh</p>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <img src="http://odopup.in/site/writereaddata/siteContent/201908020959369049navteen.jpg" alt="Cinque Terre" width="175" height="136" style="border-radius: 10px;">
+                        <span>
+                            <h2>Shri Navneet Sehgal, IAS</h2>
+                            <br>
+                            <p style="letter-spacing: 2px;">Additional Chief Secretary (ACS).,
+                                MSME & Export Promotion,
+                                Uttar Pradesh</p>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <img src="http://odopup.in/site/writereaddata/siteContent/202001101635200233govindaraju.jpg" alt="Cinque Terre" width="175" height="136" style="border-radius: 10px;">
+                        <span>
+                            <h2>Shri Govindaraju N.S, IAS</h2>
+                            <br>
+                            <p style="letter-spacing: 2px;">Commissioner & Director,
+                                Directorate of Industries,
+                                Kanpur, Uttar Pradesh</p>
+                        </span>
+                    </div>
+            
+            </section>
+            
+            <!-- gallery-->
+            
+            <!-- <section id="testimonial" class="bg-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 style="text-align: center; padding-bottom: 20px; color:whitesmoke; font-size: 50px;" data-toggle="popover" title="Popover title" data-content="Click Here For More! "><strong>GALLERY</strong></h2>
+                            
+                        </div>
+                        <div class="col-12">
+                            <div id="testimonialCarousel" class="carousel slide" data-ride="carousel"> -->
+                                <!-- Slide Indicators -->
+                                <!-- <ol class="carousel-indicators bg-dark">
+                                    <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+                                    <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner bg-dark" role="listbox"> -->
+                                    <!-- Slide 1 -->
+                                    <!-- <div class="carousel-item active bg-dark">
+                                        <div class="carousel-content">
+                                            <div class="client-img"><img src="images/Photos/home1.jpg" width="100%" height="500px" alt="Testimonial Slider"></div>
+                                            <h3> <br><span></span></h3>
+                                            <p class="col-md-8 offset-md-2"></p>
+                                        </div>
+                                    </div> -->
+                                    <!-- Slide 2 -->
+                                    <!-- <div class="carousel-item bg-dark">
+                                        <div class="carousel-content ">
+                                            <div class="client-img"><img src="images/Photos/home2.jpg" width="100%" height="500px" alt="Testimonial Slider"></div>
+                                            <h3><br><span></span></h3>
+                                            <p class="col-md-8 offset-md-2"></p>
+                                        </div>
+                                    </div> -->
+                                    <!-- Slide 3 -->
+                                    <!-- <div class="carousel-item bg-dark">
+                                        <div class="carousel-content ">
+                                            <div class="client-img"><img src="images/Photos/home3.jpg" width="100%" height="500px" alt="Testimonial Slider"></div>
+                                            <h3><br><span></span></h3>
+                                            <p class="col-md-8 offset-md-2"></p>
+                                        </div>
+                                    </div> -->
+                                    <!-- Slider pre and next arrow -->
+                                    <!-- <a class="carousel-control-prev text-white " href="#testimonialCarousel" role="button" data-slide="prev">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                    <a class="carousel-control-next text-white " href="#testimonialCarousel" role="button" data-slide="next">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <!-- galleryend-->
+            <section class="row below">
+                <div class="col-lg-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim sodales ut eu sem integer vitae justo. Ultrices dui sapien eget mi proin sed. Tristique magna sit amet purus. Suspendisse faucibus interdum posuere lorem ipsum dolor sit. Augue neque gravida in fermentum et sollicitudin. In hac habitasse platea dictumst quisque sagittis purus sit. Tristique magna sit amet purus gravida quis. Massa tempor nec feugiat nisl pretium fusce id velit ut. Consequat interdum varius sit amet mattis vulputate enim. Facilisis volutpat est velit egestas dui id. Ornare suspendisse sed nisi lacus sed viverra. Vestibulum lectus mauris ultrices eros in cursus turpis massa. Consectetur adipiscing elit duis tristique sollicitudin nibh. Cras fermentum odio eu feugiat pretium nibh. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Risus feugiat in ante metus dictum at tempor commodo. Posuere morbi leo urna molestie at elementum eu. Est ultricies integer quis auctor elit sed. Aliquam purus sit amet luctus venenatis lectus magna.
+
+                        Orci sagittis eu volutpat odio facilisis. Sem viverra aliquet eget sit amet tellus. Ac turpis egestas sed tempus. Sit amet facilisis magna etiam. Tristique nulla aliquet enim tortor at auctor urna nunc. A diam maecenas sed enim. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Vel eros donec ac odio tempor orci. Ipsum faucibus vitae aliquet nec ullamcorper. Dolor sit amet consectetur adipiscing. Ipsum dolor sit amet consectetur adipiscing elit duis tristique. Lacus vel facilisis volutpat est velit egestas dui id ornare. Molestie nunc non blandit massa enim nec dui nunc. Ultricies tristique nulla aliquet enim tortor. Vitae et leo duis ut diam quam nulla porttitor. Dui vivamus arcu felis bibendum ut tristique. Lacus luctus accumsan tortor posuere ac. Elit eget gravida cum sociis natoque penatibus. </p>
+                </div>
+            </section>
+                    
+                    <script src="images/js/polyfills.js"></script>
+                    <script src="images/js/demo2.js"></script>
+                    <!-- For the demo ad only -->   
+            
+                    <div class="footer-copyright" style="background-color: rgb(61, 39, 39);">
+                        <div class="container" >
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <p style="color: white; font-size:26px;">Copyright black pottery © 2020. All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            <!-- footer start-->
+       
+         
+
+
+
+
